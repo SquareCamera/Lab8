@@ -60,7 +60,14 @@ public class CustomList extends ArrayAdapter<City> {
         }
         return Boolean.FALSE;
     }
-    public void deleteCity(City city){}
+    public void deleteCity(City city){
+        if (hasCity(city) == Boolean.TRUE){
+            cities.remove(city);
+        }
+        else{
+            throw new RuntimeException("The city can't be found in the list");
+        }
+    }
 
 }
 
