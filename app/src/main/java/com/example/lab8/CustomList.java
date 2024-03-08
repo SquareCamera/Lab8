@@ -68,6 +68,9 @@ public class CustomList extends ArrayAdapter<City> {
             throw new RuntimeException("The city can't be found in the list");
         }
     }
+    public int countCities(){
+        return 0;
+    }
 
 }
 
