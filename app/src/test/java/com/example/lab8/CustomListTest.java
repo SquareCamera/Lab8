@@ -35,6 +35,7 @@ public class CustomListTest {
     }
     @Test
     public void testHasCity() {
+        //add a city and check if hasCity is true
         list = MockCityList();
         City city = new City("Toronto", "Ontario");
         list.addCity(city);
@@ -42,6 +43,7 @@ public class CustomListTest {
     }
     @Test
     public void testDeletecity(){
+        //delete the city and check if hasCity is false
         list = MockCityList();
         City city = new City("Toronto", "Ontario");
         list.addCity(city);
@@ -51,10 +53,13 @@ public class CustomListTest {
     }
     @Test
     public void testCountCities(){
+        //check if count goes up and then down after deleting
         list = MockCityList();
         City city = new City("Toronto", "Ontario");
         list.addCity(city);
         assertEquals(1, list.countCities());
+        list.deleteCity(city);
+        assertEquals(0, list.countCities());
     }
 
 
